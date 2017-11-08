@@ -1,0 +1,23 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lai Weng Han",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib",
+    "casper": "./node_modules/.bin/casperjs lib/index.js",
+    "remove": "rimraf lib",
+    "start": "npm run remove && npm run build && npm run casper"
+  },
+  "dependencies": {
+    "casperjs": "^1.1.4",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jshint": "^2.9.5",
+    "rimraf": "^2.6.2"
+  }
+}
